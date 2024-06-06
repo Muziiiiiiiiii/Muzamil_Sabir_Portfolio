@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Muzamil Sabir Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+.about-img {
+	border: 3px solid;
+	border-color: rgb(0, 162, 255);
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+input{
+	align-items: center;
+	padding: 10px;
+	margin: 15px;
+}
+.btn{
+	background-color: coral;
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"> Portfolio </a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#Experience-section" class="nav-link"><span> Experience </span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	</nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true"> 
+				<div class="one-third js-fullheight order-md-last img" style="background-image: url('./images/ae5e8e74-ed51-47b8-93ec-0d2998288651.jpeg'); border: 3px solid; border-color: turquoise;">				
+
+
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Muzamil Sabir</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Full Stack Web Developer  ',
+						'Frontend Developer  ',
+						'Backend Developer   ',
+						];
+
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+						
+			            <p><a href="c:\Users\Muzamil Sabir\Downloads\Muzamil Sabir Cv.pdf" class="btn btn-primary py-3 px-4"> Download CV </a> </p>
+						<br>
+						<div class="col-md-6">
+							<ul class="ftco-footer-social list-unstyled d-flex justify-content-center justify-content-md-end align-items-center mb-0">
+								<li class="ftco-animate"><a href="https://whatsapp.com/dl/"><span class="icon-whatsapp"></span></a></li>
+								<li class="ftco-animate"><a href="https://www.facebook.com/alisha.punjabi.391?mibextid=ZbWKwL"><span class="icon-facebook"></span></a></li>  
+								<li class="ftco-animate"><a href="https://www.linkedin.com/in/muzamil-bozdar-b0669927b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><span class="icon-linkedin"></span></a></li>
+								<li class="ftco-animate"><a href="https://www.instagram.com/invites/contact/?igsh=cmd6ZWJtbHk4M3U0&utm_content=n7hozpe"><span class="icon-instagram"></span></a></li>
+							</ul>
+						</div>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="c:\Users\Muzamil Sabir\Downloads\Muzamil Sabir Portfolio\Muzamil Sabir Portfolio\images\ae5e8e74-ed51-47b8-93ec-0d2998288651.jpeg" class="img-fluid rounded b-shadow-a" alt="" style="background-image: url('c:\Users\Muzamil Sabir\Downloads\Muzamil Sabir Portfolio\Muzamil Sabir Portfolio\images\ae5e8e74-ed51-47b8-93ec-0d2998288651.jpeg');">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Muzamil Sabir</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Full Stack Web Developer</span></p>
+										<p><span class="title-s">Experience: </span> <span>1 year Experience</span></p>
+										<p><span class="title-s">Address: </span> <span>Madina Colony Kumbhar Paraa Tando Allahar Sindh, Pakistan </span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>HTML</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>CSS</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Javascript</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Php </span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Wordpress</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About me</h2>
+								
+								<p>With over 1 years of comprehensive experience in the Full Stack Web Development. 
+</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span> Full Stack Web Developer </span></li>
+									<li class="d-flex"><span>Domain:</span> <span> Frontend &amp; Backend Developer </span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Information Technology (IT) </span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Urdu, Sindhi, Siraiki</span></li>
+									<li class="d-flex"><span>Expert Languages:</span> <span> HTML, CSS, Bootstrap, Javascript, PHP, Wordpress, Jquary, NodeJS </span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Programming, Development, Coding etc.</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/muzamil-bozdar-b0669927b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+	<br>
+
+		<div class="row">
+			<h1 class="big-4"> Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024-Present</span>
+						<h2> Full Stack Web Developer Specialist </h2>
+						<span class="position"> Experion, Tando Allahyar Sindh, Pakistan </span>
+						<p class="mt-4"> Led the frontend and backend development, and implementation of Page layout, and production communication materials. </p> 
+							<ul>
+								<li>Delegated tasks to a team of 5 devolopers and provided guidance on all aspects of the project.</li>
+								<li>Supervised the assessment of all development materials to ensure design quality and accuracy.</li>
+								<li> Oversaw the efficient utilization of production project budgets ranging from $2,000 to $25,000. </li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-2023</span>
+						<h2> Website developement </h2>
+						<span class="position"> Software House of Hyderabad Sindh, Pakistan  </span>
+						<p class="mt-4"> Developed numerous part for websites, Like including Home Page, header, Section Page, Main Page, and Website footer.
+							<ul>
+								<li>Successfully managed up to 15+ website development projects or tasks.</li>
+								<li>Recommended and consulted with clients on the most appropriate website development solutions for their services.</li>
+								<li>Created an average of 15+ website development projects and proposals per month for clients and account managers in the context of website development.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		
+			<div class="row">
+
+
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2026</span>
+    					<h2>Bachelor of Information Technology (IT)</h2>
+    					<span class="position">Sindh Agriculture University Tandojam </span>
+    					<p class="mt-4"> Second Year 4th Semester is Continue </p>
+    				</div>
+    			</div>
+
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2021-2022</span>
+    					<h2> Intermediate (HSC) </h2>
+    					<span class="position">Mehran Higher Secondry School Tando Allahyar </span>
+    					<p class="mt-4">Grade: A </p>
+    				</div>
+				</div>
+
+    		</div>
+
+    	
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p> These are the few my projects template of Full Stack web Development </p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <img src="c:\Users\Muzamil Sabir\Downloads\Muzamil Sabir Portfolio\Muzamil Sabir Portfolio\images\7b5f64c4-ef41-4fbb-ab79-02185875918a.jpeg" class="block-20 zoom-effect" style="background-image: url('c:\Users\Muzamil Sabir\Downloads\Muzamil Sabir Portfolio\Muzamil Sabir Portfolio\images\7b5f64c4-ef41-4fbb-ab79-02185875918a.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="!#">H.A REAL ESTATE Dymanic Website </a></h3>
+                <p> H.A REAL ESTATE, These E-commerce website your premier online destination 
+					for all your real estate needs. Browse thousands of properties, refine your search with 
+					advanced filters and connect with expert agents for personalized support. Stay updated with 
+					market trends and news and buy, sell and invest ease and confidence. Empowering your real 
+					estate journey, one property at a time</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <img src="c:\Users\Muzamil Sabir\Downloads\Muzamil Sabir Portfolio\Muzamil Sabir Portfolio\images\258584c2-597a-4ab1-b836-5615840d799f.jpeg" class="block-20 zoom-effect" style="background-image: url('c:\Users\Muzamil Sabir\Downloads\Muzamil Sabir Portfolio\Muzamil Sabir Portfolio\images\258584c2-597a-4ab1-b836-5615840d799f.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#!"> Pakistan Tour Website full Responsive </a></h3>
+                <p>
+					Pakistan, a land of rich history and diverse cultures, beckons travelers with its stunning landscapes, ancient civilizations, and warm hospitality. From the bustling streets of Lahore to the serene valleys of Swat, each destination offers a unique experience. Discover the majestic mountains of the Himalayas and the Karakoram.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <img src="c:\Users\Muzamil Sabir\Downloads\Muzamil Sabir Portfolio\Muzamil Sabir Portfolio\images\Screenshot (2).png" class="block-20 zoom-effect" style="background-image: url('c:\Users\Muzamil Sabir\Downloads\Muzamil Sabir Portfolio\Muzamil Sabir Portfolio\images\Screenshot (2).png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#!"> Digital Calculator Project </a></h3>
+                <p> 
+					The digital calculator revolutionized computation by providing quick and accurate solutions to mathematical problems. Its invention marked a significant milestone in the history of technology, streamlining arithmetic tasks and paving the way for further advancements in computing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span> Client Reviews </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span> Client Feedback </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2><span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="index.html" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+
+
+		<div class="container text-center">
+			<div class="row">
+			  <div class="col">
+				<form>
+					<div class="mb-3">
+					  <input type="text" class="form-control" id="exampleInputFullName" placeholder="Full Name">
+					</div>
+					<div class="mb-3">
+						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email Address">
+					  </div>
+					  <div class="mb-3">
+						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Phone Number">
+					  </div>
+					  <div class="mb-3">
+						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Subject">
+					  </div>
+					  <div class="mb-3">
+						<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Give me your project detail" rows="5" style="margin-left: 13px;"></textarea>
+					  </div>
+					<button type="submit" class="btn btn-primary" style="padding: 15px;">Send Message</button>
+				  </form>
+			  </div>
+			  
+			  <div class="col">
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28818.928345537875!2d68.71322824999999!3d25.45945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c05f81bd879fb%3A0x961954b2d542ebe0!2sTando%20Allahyar%2C%20Tando%20Allah%20Yar%2C%20Sindh!5e0!3m2!1sen!2s!4v1717472848585!5m2!1sen!2s" width="300" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			  </div>
+			</div>
+		  </div>
+
+		  <div>
+			
+		  </div>
+
+		<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="margin-top: 150px;">
+	<!-- Section: Social media -->
+	<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+	  <!-- Left -->
+	  <div class="me-5 d-none d-lg-block">
+		<span>Get connected with us on social networks:</span>
+	  </div>
+	  <!-- Left -->
+  
+	  <!-- Right -->
+		<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0" style="margin-right:10px;">
+			<li class="ftco-animate"><a href="https://whatsapp.com/dl/"><span class="icon-whatsapp"></span></a></li>
+			<li class="ftco-animate"><a href="https://www.facebook.com/alisha.punjabi.391?mibextid=ZbWKwL"><span class="icon-facebook"></span></a></li>  
+			<li class="ftco-animate"><a href="https://www.linkedin.com/in/muzamil-bozdar-b0669927b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><span class="icon-linkedin"></span></a></li>
+			<li class="ftco-animate"><a href="https://www.instagram.com/invites/contact/?igsh=cmd6ZWJtbHk4M3U0&utm_content=n7hozpe"><span class="icon-instagram"></span></a></li>
+		  </ul>
+
+	  <!-- Right -->
+	</section>
+	<!-- Section: Social media -->
+  
+	<!-- Section: Links  -->
+	<section class="">
+	  <div class="container text-center text-md-start mt-5">
+		<!-- Grid row -->
+		<div class="row mt-3">
+		  <!-- Grid column -->
+		  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+			<!-- Content -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			  <i class="fas fa-gem me-3"></i> My Portfolio
+			</h6>
+			<p>
+			  Hello, I'm Muzamil Sabir I am professional Full Stack Web Developer Means Frontent Developer, Bacend Developer
+			</p>
+		  </div>
+		  <!-- Grid column -->
+  
+		  <!-- Grid column -->
+		  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			  Expert
+			</h6>
+			  <p class="text-reset">HTML </p>
+			  <p class="text-reset">CSS</p>
+			  <p class="text-reset">Javascript</p>
+			  <p class="text-reset">PHP</p>
+			<p class="text-reset">Wordpress </p>
+		  </div>
+		  <!-- Grid column -->
+  
+		  <!-- Grid column -->
+		  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			  Page links
+			</h6>
+			<p>
+			  <a href="#!" class="text-reset">Home </a>
+			</p>
+			<p>
+			  <a href="#!" class="text-reset"> About </a>
+			</p>
+			<p>
+			  <a href="#!" class="text-reset">Experience</a>
+			</p>
+			<p>
+			  <a href="#!" class="text-reset"> Project </a>
+			</p>
+			<p>
+				<a href="#!" class="text-reset"> Contact </a>
+			  </p>
+		  </div>
+		  <!-- Grid column -->
+  
+		  <!-- Grid column -->
+		  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">Contact US </h6>
+			<p><i class="fas fa-home me-3"></i> Madina Colony Kumbhar Paraa TandoAllahyar Sindh, Pakistan </p>
+			<p>
+			  <i class="fas fa-envelope me-3"></i>
+			  bozdarmuzamil8@gmail.com
+			</p>
+			<p><i class="fas fa-phone me-3"></i> +923242977884 </p>
+			<p><i class="fas fa-print me-3"></i> +923168953503 </p>
+		  </div>
+		  <!-- Grid column -->
+		</div>
+		<!-- Grid row -->
+	  </div>
+	</section>
+	<!-- Section: Links  -->
+  
+	<!-- Copyright -->
+	<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+	  © 2024 All Right are Reserved.
+	</div>
+	<!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+		  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+  
+  
+    
+  </body>
+</html>
